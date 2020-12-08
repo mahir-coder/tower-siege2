@@ -18,14 +18,17 @@ class Box{
   display(){
     
     if(this.body.speed<3){
-    // rect(this.body.position.x,this.body.position.y,this.width,this.height)
-    image(this.image,this.body.position.x-20,this.body.position.y-20,this.width,this.height)
-    }else{ World.remove(world,this.body)
+      // rect(this.body.position.x,this.body.position.y,this.width,this.height)
+      image(this.image,this.body.position.x-20,this.body.position.y-20,this.width,this.height)
+    }
+    else{ 
+      
+      World.remove(world,this.body)
+
       push()
       this.visiblity=this.visiblity-50
-      
-      image(this.image,this.body.position.x-20,this.body.position.y-20,this.width,this.height)
-      tint(this.visiblity,126)
+      //image(this.image,this.body.position.x-20,this.body.position.y-20,this.width,this.height)
+      tint(255,this.visiblity)
       image(this.image,this.body.position.x-20,this.body.position.y-20,this.width,this.height)
       pop()
     }

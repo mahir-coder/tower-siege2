@@ -62,3 +62,9 @@ function mouseReleased(){
   str.fly();
   
 }
+
+function keyPressed(){
+  if(keyCode=32){
+    str.attach(polygon)
+  }
+}
